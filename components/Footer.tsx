@@ -4,7 +4,7 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer className='flex-wrap py-4 px-8 sm:px-16 flex-between gap-2 w-full bg-[#161921]'>
-            <p className='text-white font-bold text-base'>@2023 EpicAnimeVault</p>
+            <p className='text-white font-bold text-base'>@2024 EpicAnimeVault</p>
             <Image
                 src="./logo.svg"
                 alt="logo"

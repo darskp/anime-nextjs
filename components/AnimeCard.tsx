@@ -2,6 +2,7 @@ import Image from 'next/image';
 import React from 'react'
 import { motion } from "framer-motion"
 import { MotionDiv } from './MotionDiv';
+import Link from 'next/link'
 
 export interface AnimeProp {
     id: string;
@@ -24,6 +25,8 @@ const variants = {
 }
 
 const AnimeCard = ({ anime, index }: animeProp) => {
+    console.log(anime);
+
     return (
         <MotionDiv
             variants={variants}
@@ -46,7 +49,11 @@ const AnimeCard = ({ anime, index }: animeProp) => {
             </div>
             <div className='py-4 flex flex-col gap-3'>
                 <div className='flex-between gap-1'>
-                    <h2 className='font-bold text-white text-xl line-clamp-1 w-full'>{anime.name}</h2>
+                    <Link href={`/${anime.id}`}>
+                        <h2 className='font-bold text-white text-xl line-clamp-1 w-full'>
+                            {anime.name}
+                        </h2>
+                    </Link>
                     <div className='py-1 px-2 bg-[#161921] rounded-sm'>
                         <p className='text-white text-sm font-bold capitalize'>{anime.kind}</p>
                     </div>
